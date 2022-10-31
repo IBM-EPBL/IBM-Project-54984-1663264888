@@ -3,12 +3,10 @@ import sqlite3
 
 
 app = Flask(__name__)
-app.secret_key = "7847541"
+app.secret_key = "637492"
 
 def get_db():
-    conn = sqlite3.connect('user_details.db')
-    # with open('schema.sql') as schema:
-    #     conn.executescript(schema.read())
+    conn = sqlite3.connect('users.db')
     conn.row_factory = sqlite3.Row
     return conn
 
